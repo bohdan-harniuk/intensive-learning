@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Carbon;
 
 class User extends Authenticatable
 {
@@ -36,10 +37,19 @@ class User extends Authenticatable
         $this->attributes['password'] = bcrypt($password);
     }
 
-    public function setUsernameAttribute($username){
+
+    public function setUsernameAttribute($username)
+    {
         $this->attributes['username'] = ucfirst($username);
     }
-    public function setNameAttribute($name){
+    public function setNameAttribute($name)
+    {
         $this->attributes['name'] = ucfirst($name);
+    }
+    
+    public function getAgeAttribute($value)
+    {
+        $value = $this->attributes['dob'];
+        return Carbon\Carbon::createFromFormat('Y-m-d', $value)->age;
     }
 }
