@@ -39,7 +39,7 @@ class User extends Authenticatable
     
     public function getAgeAttribute($value)
     {
-        $date = json_decode($value);
-        return Carbon\Carbon::createFromDate($date[0],$date[1],$date[2])->age;
+        $value = $this->attributes['dob'];
+        return Carbon\Carbon::createFromFormat('Y-m-d', $value)->age;
     }
 }
