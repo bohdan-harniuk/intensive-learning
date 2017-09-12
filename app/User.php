@@ -35,4 +35,11 @@ class User extends Authenticatable
     {
         $this->attributes['password'] = bcrypt($password);
     }
+
+    public function setUsernameAttribute($username){
+        $this->attributes['username'] = ucfirst($username);
+    }
+    public function setNameAttribute($name){
+        $this->attributes['name'] = ucfirst($name);
+    }
 }
