@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use App\User;
+use App\Role;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -15,6 +17,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+        
+        User::created(function($user) {
+            $user->roles()->attach(Role::whereName('User')->first());
+        });
     }
 
     /**

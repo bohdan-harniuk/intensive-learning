@@ -10,11 +10,6 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'name', 'email', 'password', 'username', 'dob',
     ];
@@ -23,20 +18,42 @@ class User extends Authenticatable
         'dob',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
     protected $hidden = [
         'password', 'remember_token',
     ];
     
+    /// table relationship
+    public function roles()
+    {
+        return $this->belongsToMany('App\Role', 'user_role', 'user_id', 'role_id');
+    }
+    
+    /// roles functions
+    public function hasAnyRole($roles)
+    {
+        if(is_array($roles)) {
+            foreach($roles as $role) {
+                if($this->hasRole($role))
+                    return true;
+            }
+        } else {
+            if($this->hasRole($roles))
+                return true;
+        }
+        return false;
+    }
+    public function hasRole($role){
+        if($this->roles()->whereName($role)->first()) {
+            return true;
+        }
+        return false;
+    }
+    
+    /// MUTATORS --- mutators
     public function setPasswordAttribute($password)
     {
         $this->attributes['password'] = bcrypt($password);
     }
-
 
     public function setUsernameAttribute($username)
     {
@@ -47,6 +64,7 @@ class User extends Authenticatable
         $this->attributes['name'] = ucfirst($name);
     }
     
+    /// ACCESSORS --- accessors
     public function getAgeAttribute($value)
     {
         $value = $this->attributes['dob'];
