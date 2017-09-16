@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
+});
+
+Route::get('/lesons_group', function () {
+    return view('user.leson_group.lesons_group');
 });
 
 Auth::routes();
