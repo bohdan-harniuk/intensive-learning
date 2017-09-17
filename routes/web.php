@@ -37,3 +37,6 @@ Route::post('/admin_roles', [
     'uses' => 'admin\tables\TablesController@postAdminAssignRoles',
     'as' => 'admin.assign',
     ]);
+
+Route::resource('lessons_group', 'study\LessonsGroupController');
+Route::resource('lessons', 'study\LessonsController');
