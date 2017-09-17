@@ -10,7 +10,7 @@
     <title>I-Learning Admin Dashboard</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/user-b/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
     <link href="metisMenu/metisMenu.min.css" rel="stylesheet">
@@ -378,7 +378,7 @@
     <script src="js/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/user-b/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
     <script src="metisMenu/metisMenu.min.js"></script>
