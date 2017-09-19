@@ -12,7 +12,7 @@
     <title>SB Admin 2 - Bootstrap Admin Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap_landing.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
     <link href="metisMenu/metisMenu.min.css" rel="stylesheet">
@@ -42,7 +42,7 @@
             <div class="col-md-4">
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title" style="text-transform: none;">Please Sign In</h3>
+                        <h3 class="panel-title" style="text-transform: none; color: #333!important;">Please Sign In</h3>
                     </div>
                         <br/>
                     <div class="panel-body">

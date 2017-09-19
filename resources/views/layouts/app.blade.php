@@ -12,19 +12,26 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Bootstrap Core CSS -->
-     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+     <link href="http://localhost:8000/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/profile.css" rel="stylesheet">
+    <link href="http://localhost:8000/css/profile.css" rel="stylesheet">
 
 
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://localhost:8000/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template -->
-    <link href="css/agency.min.css" rel="stylesheet">
+    <link href="http://localhost:8000/css/agency.min.css" rel="stylesheet">
     
+    <!-- Custom fonts for this template -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,7 +45,7 @@
 <body>
 
     <div id="wrapper">
-            <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #222;" id="mainNav">
               <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top">I-learning</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,19 +55,19 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                      <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                      <a class="nav-link js-scroll-trigger" style="font-size: 100%;" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link js-scroll-trigger" href="#portfolio">Курси</a>
+                      <a class="nav-link js-scroll-trigger" style="font-size: 100%;" href="#portfolio">Курси</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                      <a class="nav-link js-scroll-trigger" style="font-size: 100%;" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+                      <a class="nav-link js-scroll-trigger" style="font-size: 100%;" href="#team">Team</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link js-scroll-trigger" href="#contact_scroll">Registrate</a>
+                      <a class="nav-link js-scroll-trigger" style="font-size: 100%;" href="#contact_scroll">Registrate</a>
                     </li>  
                   </ul>
                   <ul class="navbar-nav ml-auto navbar-right">
@@ -70,7 +77,7 @@
                             <li class="nav-item"><a href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <a href="#" class="dropdown-togglenav-link js-scroll-trigger" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
@@ -97,19 +104,20 @@
         
     </div>
     <!-- /#wrapper -->
+    <div class="stub"></div>
     @yield('content')
     
     <!-- jQuery -->
-    <script src="js/jquery/jquery.min.js"></script>
-    <script src="js/popper/popper.min.js"></script>
-    <script src="js/jquery-easing/jquery.easing.min.js"></script>
+    <script src="http://localhost:8000/js/jquery/jquery.min.js"></script>
+
+    <script src="http://localhost:8000/js/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://localhost:8000/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Contact form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <script src="http://localhost:8000/js/jqBootstrapValidation.js"></script>
+    <script src="http://localhost:8000/js/contact_me.js"></script>
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
