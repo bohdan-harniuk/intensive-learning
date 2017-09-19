@@ -10,7 +10,7 @@
         <title>I-Learning</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="bootstrap/css/bootstrap_landing.min.css" rel="stylesheet">
 
         <!-- Custom fonts for this template -->
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -614,7 +614,7 @@ London is the capital of Britain.</p>
     <!-- Bootstrap core JavaScript -->
     <script src="js/jquery/jquery.min.js"></script>
     <script src="js/popper/popper.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap_landing.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="js/jquery-easing/jquery.easing.min.js"></script>

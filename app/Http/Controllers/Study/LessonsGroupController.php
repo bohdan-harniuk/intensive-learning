@@ -19,6 +19,10 @@ class LessonsGroupController extends Controller
         return view('study.lessons_group.create');
     }
 
+    public function slider(){
+        return view('study.lessons_group.slider');
+    }
+
     public function store(Request $request)
     {
         LessonsGroup::create($request->all());
