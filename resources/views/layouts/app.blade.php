@@ -12,26 +12,19 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="bootstrap/css/user-b/bootstrap.min.css" rel="stylesheet">
-
-    <!-- MetisMenu CSS -->
-    <link href="metisMenu/metisMenu.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/sb-admin-2.css" rel="stylesheet">
+     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/profile.css" rel="stylesheet">
 
-    <!-- Morris Charts CSS -->
-    <link href="morrisjs/morris.css" rel="stylesheet">
+
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/user-f/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
+    
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,92 +38,81 @@
 <body>
 
     <div id="wrapper">
-            <!-- Navigation -->
-            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0;background-color: #222;">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+              <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">I-learning</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                  Menu
+                  <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" href="#portfolio">Курси</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" href="#contact_scroll">Registrate</a>
+                    </li>  
+                  </ul>
+                  <ul class="navbar-nav ml-auto navbar-right">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item"><a href="{{ route('login') }}">Login</a></li>
+                            <li class="nav-item"><a href="{{ route('register') }}">Register</a></li>
+                        @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
 
-                <div class="container"> 
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="{{ route('home') }}">I-Learning</a>
-                    </div>
-                    <!-- /.navbar-header -->
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
 
-                    <ul class="nav navbar-top-links navbar-right">
-                       <li class="nav-item">
-                          <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link js-scroll-trigger" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link js-scroll-trigger" href="#">Team</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link js-scroll-trigger" href="/lesons_group">Courses</a>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                             {{ Auth::user()->name }}    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-user">
-                                <li><a href="{{ route('home') }}"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                                </li>
-                                <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                                </li>
-                                <li class="divider"></li>
-                                
-                                <li>
-                                    <a href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                                 <i class="fa fa-sign-out fa-fw"></i>
-                                        Logout
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                                    </form>
-                                </li>
-                            </ul>
-                            <!-- /.dropdown-user -->
-                        </li>
-                        <!-- /.dropdown -->
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endguest
                     </ul>
-                    <!-- /.navbar-top-links -->
-
                 </div>
-                
-                <!-- /.navbar-static-side -->
+              </div>
             </nav>
     
         
     </div>
     <!-- /#wrapper -->
     @yield('content')
+    
     <!-- jQuery -->
     <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/popper/popper.min.js"></script>
+    <script src="js/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="bootstrap/js/user-b/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="metisMenu/metisMenu.min.js"></script>
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
 
-    <!-- Morris Charts JavaScript -->
-    <script src="raphael/raphael.min.js"></script>
-    <script src="morrisjs/morris.min.js"></script>
-    <script src="data/morris-data.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/sb-admin-2.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
 
 </body>
 
