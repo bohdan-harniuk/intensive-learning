@@ -15,10 +15,12 @@ class CreateLessonsGroupTable extends Migration
     {
         Schema::create('lessons_group', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
+            $table->integer('user_id')->unsigned()->nullable()->onDelete('set null');
+            $table->string('author');
             $table->string('title',35);
             $table->string('description',35);
             $table->string('text');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
