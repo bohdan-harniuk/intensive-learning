@@ -6,10 +6,11 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+        "Doctrine/dbal": "^2.5.13",
         "fideloper/proxy": "~3.3",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
-        "Doctrine/dbal": "^2.5.13" 
+        "unisharp/laravel-filemanager": "^1.8"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

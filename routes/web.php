@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('landing');
-});
+Route::get('/', 'AppController@getLanding')->name('index');
 
 Route::get('/exercises', function () {
     return view('exercises');
@@ -42,5 +40,14 @@ Route::post('/admin_roles', [
     'as' => 'admin.assign',
     ]);
 
-Route::resource('/lessons_group', 'study\LessonsGroupController');
+Route::resource('/lessons_group', 'study\LessonsGroupController', ['names' => [
+    'index' => 'lessons_group.index',
+    'show' => 'lessons_group.show',
+    'edit' => 'lessons_group.edit',
+    'destroy' => 'lessons_group.delete',
+]]);
+Route::get('/courses/{filename}', [
+    'uses' => 'study\LessonsGroupController@getLessonsGroupImage',
+    'as' => 'lessons_group.image',
+]);
 Route::resource('/lessons', 'study\LessonsController');

@@ -1,0 +1,94 @@
+<h3 style="text-align: center;"><strong>There are two tenses in English &ndash; past and present</strong></h3>
+<p style="text-align: center;"><strong><em>The present tenses in English are used:</em></strong></p>
+<ul>
+<li>to talk about the&nbsp;<strong>present</strong></li>
+<li>to talk about the&nbsp;<strong>future</strong></li>
+<li>to talk about the&nbsp;<strong>past&nbsp;</strong>when we are telling a story in&nbsp;<strong>spoken&nbsp;</strong>English or when we are summarising a book, film, play etc.</li>
+</ul>
+<p><br />There are&nbsp;<strong>four&nbsp;</strong>present tense forms in English:</p>
+<table style="margin-left: 240px;" border="1" cellspacing="0" cellpadding="1">
+<thead>
+<tr>
+<th style="width: 195px;" scope="col">Tense</th>
+<th style="width: 145px;" scope="col">Form</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 195px;">Present simple:</td>
+<td style="width: 145px;">I work</td>
+</tr>
+<tr>
+<td style="width: 195px;">Present continuous:</td>
+<td style="width: 145px;">I am working</td>
+</tr>
+<tr>
+<td style="width: 195px;">Present perfect:</td>
+<td style="width: 145px;">I have worked</td>
+</tr>
+<tr>
+<td style="width: 195px;">Present perfect continuous:</td>
+<td style="width: 145px;">I have been working</td>
+</tr>
+</tbody>
+</table>
+<p><br />We use these forms:</p>
+<ul>
+<li>to talk about the&nbsp;<strong>present</strong>:</li>
+</ul>
+<p class="rteindent1" style="text-align: center;">He&nbsp;<strong>works&nbsp;</strong>at McDonald&rsquo;s. He&nbsp;<strong>has worked&nbsp;</strong>there for three months now.<br />He&nbsp;<strong>is working&nbsp;</strong>at McDonald&rsquo;s. He&nbsp;<strong>has been working&nbsp;</strong>there for three months now.<br />London&nbsp;<strong>is&nbsp;</strong>the capital of Britain.</p>
+<p style="text-align: center;"><strong><em>The past tense in English is used:</em></strong></p>
+<ul>
+<li>to talk about the&nbsp;<strong>past</strong></li>
+<li>to talk about&nbsp;<strong>hypotheses&nbsp;</strong>&ndash; things that are imagined rather than true.</li>
+<li>for&nbsp;<strong>politeness</strong>.</li>
+</ul>
+<p>There are&nbsp;<strong>four&nbsp;</strong>past tense forms in English:</p>
+<table style="margin-left: 270px;" border="1" cellspacing="0" cellpadding="1">
+<thead>
+<tr>
+<th style="width: 172px;" scope="col">Tense</th>
+<th style="width: 137px;" scope="col">Form</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 172px;">Past simple:</td>
+<td style="width: 137px;">I worked</td>
+</tr>
+<tr>
+<td style="width: 172px;">Past continuous:</td>
+<td style="width: 137px;">I was working</td>
+</tr>
+<tr>
+<td style="width: 172px;">Past perfect:</td>
+<td style="width: 137px;">I had worked</td>
+</tr>
+<tr>
+<td style="width: 172px;">Past perfect continuous:</td>
+<td style="width: 137px;">I had been working</td>
+</tr>
+</tbody>
+</table>
+<p>We use these forms:</p>
+<ul>
+<li>to talk about the&nbsp;<strong>past</strong>:</li>
+</ul>
+<p class="rteindent1" style="text-align: center;">He&nbsp;<strong>worked&nbsp;</strong>at McDonald&rsquo;s. He&nbsp;<strong>had worked&nbsp;</strong>there since July..<br />He&nbsp;<strong>was working&nbsp;</strong>at McDonald&rsquo;s. He&nbsp;<strong>had been working&nbsp;</strong>since July.</p>
+<ul>
+<li>to refer to the&nbsp;<strong>present&nbsp;</strong>or&nbsp;<strong>future&nbsp;</strong>in&nbsp;<strong>conditions</strong>:</li>
+</ul>
+<p class="rteindent1" style="text-align: center;">He could get a new job if he really&nbsp;<strong>tried</strong>.<br />If Jack&nbsp;<strong>was playing&nbsp;</strong>they would probably win.</p>
+<p class="rteindent1">and&nbsp;<strong>hypotheses</strong>:</p>
+<p class="rteindent1" style="text-align: center;">It might be dangerous. Suppose they&nbsp;<strong>got&nbsp;</strong>lost.<br />I would always help someone who really&nbsp;<strong>needed&nbsp;</strong>help.</p>
+<p class="rteindent1">and&nbsp;<strong>wishes</strong>:</p>
+<p class="rteindent1" style="text-align: center;">I wish it&nbsp;<strong>wasn&rsquo;t&nbsp;</strong>so cold.</p>
+<ul>
+<li>In&nbsp;<strong>conditions</strong>,&nbsp;<strong>hypotheses&nbsp;</strong>and&nbsp;<strong>wishes</strong>, if we want to talk about the&nbsp;<strong>past</strong>, we always&nbsp;use the&nbsp;<strong>past perfect</strong>:</li>
+</ul>
+<p class="rteindent1" style="text-align: center;">I would have helped him if he&nbsp;<strong>had asked</strong>.<br />It was very dangerous, What if you&nbsp;<strong>had got&nbsp;</strong>lost?<br />I wish I&nbsp;<strong>hadn&rsquo;t spent&nbsp;</strong>so much money last month.</p>
+<p>&nbsp;</p>
+<ul>
+<li>We can use the past forms&nbsp;to talk about the&nbsp;<strong>present&nbsp;</strong>in a few&nbsp;<strong>polite expressions</strong>:</li>
+</ul>
+<p class="rteindent1" style="text-align: center;">Excuse me, I&nbsp;<strong>was wondering&nbsp;</strong>if this&nbsp;<strong>was&nbsp;</strong>the train for York.<br />I just&nbsp;<strong>hoped&nbsp;</strong>you&nbsp;<strong>would&nbsp;</strong>be able to help me.</p>

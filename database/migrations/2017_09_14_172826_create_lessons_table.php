@@ -19,6 +19,7 @@ class CreateLessonsTable extends Migration
             $table->string('title',35);
             $table->string('description',35);
             $table->string('text');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
