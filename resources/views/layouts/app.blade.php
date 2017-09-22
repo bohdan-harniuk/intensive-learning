@@ -17,7 +17,9 @@
     <!-- Custom CSS -->
     <link href="http://localhost:8000/css/profile.css" rel="stylesheet">
 
-
+    <!-- Owl carusel 2 (exercises) -->
+    <link rel="stylesheet" href="http://localhost:8000/owlcarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="http://localhost:8000/owlcarousel/css/owl.theme.default.min.css">
 
     <!-- Custom Fonts -->
     <link href="{{ URL::to('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
@@ -78,7 +80,7 @@
                             <li class="nav-item"><a href="{{ route('login') }}">Login</a></li>
                             <li class="nav-item"><a href="{{ route('register') }}">Register</a></li>
                         @else
-                            <li class="dropdown">
+                            <li class="dropdown nav-item">
                                 <a href="#" class="dropdown-togglenav-link js-scroll-trigger" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
@@ -111,6 +113,9 @@
     
     <!-- jQuery -->
     <script src="http://localhost:8000/js/jquery/jquery.min.js"></script>
+    <!-- Owl carusel 2 -->
+    <script src="http://localhost:8000/owlcarousel/js/owl.carousel.min.js"></script>
+    <script src="http://localhost:8000/owlcarousel/js/my_owl.js"></script>
 
     <script src="http://localhost:8000/js/jquery-easing/jquery.easing.min.js"></script>
 
@@ -120,9 +125,11 @@
     <!-- Contact form JavaScript -->
     <script src="http://localhost:8000/js/jqBootstrapValidation.js"></script>
     <script src="http://localhost:8000/js/contact_me.js"></script>
+    
 
     <!-- Custom scripts for this template -->
     <script src="http://localhost:8000/js/agency.min.js"></script>
+
     
     
     <script src="{{ URL::to('src/js/vendor/tinymce/js/tinymce/tinymce.min.js') }}"></script>
@@ -165,7 +172,7 @@
     
     
     </script>
-   
+  
 
 </body>
 
