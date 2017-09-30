@@ -17,9 +17,9 @@ class CreateLessonsGroupTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned()->nullable()->onDelete('set null');
             $table->string('author');
-            $table->string('title',35);
-            $table->string('description',35);
-            $table->string('text');
+            $table->string('title', 100);
+            $table->text('description');
+            $table->text('text');
             $table->softDeletes();
             $table->timestamps();
         });

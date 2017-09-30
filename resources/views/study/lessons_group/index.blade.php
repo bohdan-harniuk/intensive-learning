@@ -1,7 +1,7 @@
 @extends('layouts.app')
-
 @section('content')
-    
+
+@include('study.authors-panel')   
     
     <section class="bg-light pnull" id="portfolio">
       <div class="container">

@@ -10,7 +10,7 @@ class Lesson extends Model
     use SoftDeletes;
     
     protected $fillable = [
-        'title', 'description', 'text', 'user_id','lesson_group_id'
+        'title', 'description', 'text', 'user_id','lesson_group_id', 'author',
     ];
     
     protected $dates = [

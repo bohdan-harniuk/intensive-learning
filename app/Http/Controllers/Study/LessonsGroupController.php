@@ -6,9 +6,11 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 use App\LessonsGroup;
+use App\Lesson;
 use App\Lesson_category;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Session;
 
 class LessonsGroupController extends Controller
 {
@@ -50,7 +52,15 @@ class LessonsGroupController extends Controller
     public function show($id)
     {
         $lessons_group = LessonsGroup::findOrFail($id);
-        return view('study.lessons_group.show', compact('lessons_group'));
+        Session::put('course_id', $lessons_group->id);
+        
+        $lessons = Lesson::whereLesson_group_id($lessons_group->id)->get();
+        
+            
+        return view('study.lessons_group.show', [
+            'lessons_group' => $lessons_group,
+            'lessons' => $lessons,
+        ]);
     }
      
     public function edit($id)

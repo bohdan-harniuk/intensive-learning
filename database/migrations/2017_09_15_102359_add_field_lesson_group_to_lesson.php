@@ -14,7 +14,7 @@ class AddFieldLessonGroupToLesson extends Migration
     public function up()
     {
         Schema::table('lessons', function(Blueprint $table) {
-            $table->integer('lesson_group_id');
+            $table->integer('lesson_group_id')->unsigned()->nullable()->onDelete('set null');
         });
     }
 

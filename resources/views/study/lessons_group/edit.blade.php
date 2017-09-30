@@ -2,31 +2,31 @@
 
 @section('content')
 <style type="text/css">
-.btn-primary {
-    color: #fff;
-    background-color: #337ab7;
-    border-color: #2e6da4;
-}
-.btn-primary.active, .btn-primary:active, .show>.btn-primary.dropdown-toggle {
-    color: #fff;
-    background-color: #025aa5;
-    background-image: none;
-    border-color: #01549b;
-}
-.btn-primary:hover {
-    color: #fff;
-    background-color: #025aa5;
-    border-color: #01549b;
-}
-.btn-primary.focus, .btn-primary:focus {
-    -webkit-box-shadow: 0 0 0 2px rgba(2,117,216,.5);
-    box-shadow: 0 0 0 2px rgba(2,117,216,.5);
-}
-.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.btn-primary.dropdown-toggle.focus, .open>.btn-primary.dropdown-toggle:focus, .open>.btn-primary.dropdown-toggle:hover {
-    color: #fff;
-    border-color: #025aa5;
-    background-color: #014c8c;
-}
+    .btn-primary {
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #2e6da4;
+    }
+    .btn-primary.active, .btn-primary:active, .show>.btn-primary.dropdown-toggle {
+        color: #fff;
+        background-color: #025aa5;
+        background-image: none;
+        border-color: #01549b;
+    }
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #025aa5;
+        border-color: #01549b;
+    }
+    .btn-primary.focus, .btn-primary:focus {
+        -webkit-box-shadow: 0 0 0 2px rgba(2,117,216,.5);
+        box-shadow: 0 0 0 2px rgba(2,117,216,.5);
+    }
+    .btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.btn-primary.dropdown-toggle.focus, .open>.btn-primary.dropdown-toggle:focus, .open>.btn-primary.dropdown-toggle:hover {
+        color: #fff;
+        border-color: #025aa5;
+        background-color: #014c8c;
+    }
 </style>
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
