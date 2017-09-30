@@ -10,7 +10,51 @@
         background-color:#f5f5f5;
         border-top:1px solid #ddd;
     }
+    .btn-primary {
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #2e6da4;
+    }
+    .btn-primary.active, .btn-primary:active, .show>.btn-primary.dropdown-toggle {
+        color: #fff;
+        background-color: #025aa5;
+        background-image: none;
+        border-color: #01549b;
+    }
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #025aa5;
+        border-color: #01549b;
+    }
+    .btn-primary.focus, .btn-primary:focus {
+        -webkit-box-shadow: 0 0 0 2px rgba(2,117,216,.5);
+        box-shadow: 0 0 0 2px rgba(2,117,216,.5);
+    }
+    .btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.btn-primary.dropdown-toggle.focus, .open>.btn-primary.dropdown-toggle:focus, .open>.btn-primary.dropdown-toggle:hover {
+        color: #fff;
+        border-color: #025aa5;
+        background-color: #014c8c;
+    }
+    .btn-primary.focus, .btn-primary:focus {
+    color: #fff;
+    border-color: #46a1ef;
+    background-color: #337ab7;
+    }
+    .well {
+        background-color: rgb(239, 251, 253);
+        margin-bottom: 0px;
+    }
+    #lesson-btn {
+        padding: 13px 12px;
+        font-size: 17px;
+        margin-bottom: 12px;
+    }
+    .lesson {
+        margin: 5px 0;
+    }
 </style>
+
+@include('study.authors-panel')
    
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -37,6 +81,32 @@
                         <li class="text-success">Author: {{ $lessons_group->author }} <span class="text-success small"> (category: {{ $lessons_group->category }})</span><span class="text-primary small"> - {{ $lessons_group->created_at->format('F Y') }}</span></li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-body text-center" id="lessons">
+                  <span><i class="fa fa-university fa-3x" style="color: #fed136;"></i> <p>Уроки</p></span><hr>
+                   @forelse($lessons as $lesson)
+                       <div class="lesson col-md-12">
+                            <a href="#spoiler-{{$lesson->id}}" data-toggle="collapse" class="btn btn-primary collapsed col-md-12" id="lesson-btn">{{$lesson->title}}</a>
+                            <div class="collapse" id="spoiler-{{$lesson->id}}">
+                               <div class="panel panel-default">
+                                  <div class="panel-body well">
+                                  <p style="margin-top:10px;">{{$lesson->description}}</p>
+                                  <a href=" {{ route('lesson.show', ['id' => $lesson->id]) }} " class="btn btn-success pull-right"><i class="fa fa-university"></i> Перейти до уроку</a>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                   @empty
+                   <h4>У цьому курсі поки немає доступних уроків</h4>
+                   @endforelse
+                </div>
+               
             </div>
         </div>
     </div>

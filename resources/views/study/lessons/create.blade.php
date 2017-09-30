@@ -1,77 +1,51 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            <div class="panel panel-default">
-               <div class="panel-heading">
-                   Create lesson
-               </div>
-                <div class="panel-body">
-                  <form action="/articles" method="post">
-                     {{ csrf_field() }}
-                     <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
-                      <div class="form-group">
-                       <label for="content">Content</label>
-                       <textarea name="content" id="" cols="30" rows="3" class="form-control"></textarea>
-                       </div>
-                       <div class="checkbox">
-                           <label><input type="checkbox" name="live">Live</label>
-                       </div>
-                       <div class="form-group">
-                           <label for="post_on">Post on</label>
-                           <input type="datetime-local" name="post_on" class="form-control">
-                       </div>
-                        <input type="submit" class="btn btn-success pull-right">
-                  </form>
+
+@include('study.authors-panel') 
+  
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-default">
+       <div class="panel-heading">
+           Створити урок до курсу <b>"{{ $course->title }}"</b>
+       </div>
+       <form action="/lessons" method="post" enctype="multipart/form-data">
+           <div class="panel-body"> 
+                 {{ csrf_field() }}
+                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                <input type="hidden" name="author" value="{{ Auth::user()->username }}">
+                <input type="hidden" name="lesson_group_id" value="{{ $course->id }}">
+                <div class="row">
+                   <div class="col-md-4" id="portfolio">
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" name="title" class="form-control">
+                        </div>
+                        <div class="portfolio-item">
+                            <div class="portfolio-link">
+                                <div class="portfolio-hover" style="cursor: auto;">
+                                    <div class="portfolio-hover-content">
+                                        <i class="">{{$course->title}}</i>
+                                    </div>
+                                </div>
+                                <img class="img-fluid" src="{{ route('lessons_group.image', ['filename' => $course->image ]) }}" alt="{{ $course->title }}">
+                            </div>
+                        </div>
+                   </div>
+                    <div class="form-group col-md-8">
+                        <label for="description">Description</label>
+                        <textarea name="description" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="panel-footer clearfix">
+                <div class="form-group col-md-12 text-center">
+                    <input type="submit" class="btn btn-success" value="Далі" style="padding: 9px 40px;">
+                </div>
+            </div>
+         </form>
     </div>
-
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <img src="la.jpg" alt="Chania">
-      <div class="carousel-caption">
-        <h3>Los Angeles</h3>
-        <p>LA is always so much fun!</p>
-      </div>
-    </div>
-
-    <div class="item">
-      <img src="chicago.jpg" alt="Chicago">
-      <div class="carousel-caption">
-        <h3>Chicago</h3>
-        <p>Thank you, Chicago!</p>
-      </div>
-    </div>
-
-    <div class="item">
-      <img src="ny.jpg" alt="New York">
-      <div class="carousel-caption">
-        <h3>New York</h3>
-        <p>We love the Big Apple!</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
+</div>
 </div>
 @endsection

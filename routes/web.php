@@ -42,6 +42,7 @@ Route::post('/admin_roles', [
 
 Route::resource('/lessons_group', 'study\LessonsGroupController', ['names' => [
     'index' => 'lessons_group.index',
+    'create' => 'lessons_group.create',
     'show' => 'lessons_group.show',
     'edit' => 'lessons_group.edit',
     'destroy' => 'lessons_group.delete',
@@ -50,4 +51,12 @@ Route::get('/courses/{filename}', [
     'uses' => 'study\LessonsGroupController@getLessonsGroupImage',
     'as' => 'lessons_group.image',
 ]);
-Route::resource('/lessons', 'study\LessonsController');
+Route::resource('/lessons', 'study\LessonsController', ['names' => [
+    'create' => 'lesson.create',
+    'show' => 'lesson.show',
+    'edit' => 'lesson.edit',
+    'destroy' => 'lesson.delete',
+]]);
+Route::post('/lesson_block', 'study\LBlockController@store')->name('l_block.store');
+Route::put('/lesson_block/{id}', 'study\LBlockController@update')->name('l_block.update');
+Route::delete('/lesson_block/{id}', 'study\LBlockController@destroy')->name('l_block.delete');
